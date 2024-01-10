@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  --text-primary: rgba(196, 196, 204, 1);
+  --text-secondary: #fff;
+  --bg-color: #02131A;
+  --text-emphasis: #02799D;
+  --btn-border: #fff;
+  --btn-bg-hover: #fff;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url(assets/mountains-universe-1.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;;
+}
+
+header.nav {
+  padding: 4rem 7.2rem;
+}
+
+header.nav nav {
+  display: flex;
+  gap: 3.2rem
+}
+
+header.nav nav {
+  align-items: center;
+}
+
+header.nav ul {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+ul li:nth-child(2){
+  width: 11rem;
+}
+
+ul li a {
+  display: inline-block;
+  font-size: 2.1rem;
+  line-height: 2.1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: 200ms;
+}
+
+ul li a:hover, ul li a:focus {
+  font-weight: bold;                    
+  color: var(--text-secondary);
+  transform: scale(1.05);
+}
+
+section.hero, .not-found {
+  position: absolute;
+  text-align: center;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: var(--text-primary);
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 6rem;
+}
+
+.not-found h2 {
+  color: var(--text-primary);
+  font-size: 2.8rem;
+}
+
+.hero-title {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+section.hero a {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 1.2rem 3.2rem;
+  border: 2px solid var(--btn-border);
+  border-radius: 5px;
+  margin-top: 2.4rem;
+  transition: all 0.3s ease;
+  animation: slide-in-fwd-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+}
+
+section.hero a:hover {
+  background-color: var(--btn-bg-hover);
+  color: var(--text-emphasis);
+  transition: all 0.3s ease;
+}
+
+article {
+  width: 64.8rem;
+  margin: 6.3rem 0 0 10.2rem;
+}
+
+article p {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-top: 1.6rem;
+
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(-800px) translateY(200px);
+            transform: translateZ(-800px) translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
